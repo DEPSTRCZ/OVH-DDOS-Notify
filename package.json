@@ -5,14 +5,15 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node ./src/DDOSNotify.ts",
-    "build": "tsc ./src/DDOSNotify.ts"
+    "build": "tsc"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@ovh-api/api": "^4.1.3",
     "@ovh-api/ip": "^4.0.3",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "typescript": "^5.3.3"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",

@@ -1,2 +1,3 @@
 /node_modules
 src/conf.json
+dist/conf.json

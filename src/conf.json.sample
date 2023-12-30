@@ -1,0 +1,63 @@
+{
+    "ovh": {
+        "appKey": "...",
+        "appSecret": "...",
+        "consumerKey": "..."
+    },
+    "general": {
+        "WebhookURL": "https://discord.com/api/...",
+	"ping": "<@&ID_OF_THE_ROLE>",
+        "interval": 10
+    },
+    "externalPost": {
+        "enabled": true,
+        "port": 3000,
+        "token": "NzQ5NzQ3NjQ4NjQ5NjQ2NjQ4.X0Q4jQ"
+
+    },
+    "embeds": [
+        {
+          "title": "DDOS Attack has been detected!",
+          "description": "Any description you want",
+          "color": 14033408,
+          "fields": [
+            {
+                "name": "Date",
+                "value": ""
+            }
+          ],
+          "footer": {
+            "text": "Made by depstr"
+          }
+        },
+        {
+          "title": "Detected DDOS attack has ended.",
+          "description": "Any description",
+          "color": 644608,
+          "fields": [
+            {
+                "name": "Date",
+                "value": ""
+            }
+          ],
+          "footer": {
+            "text": "Made by depstr"
+          }
+        },
+        {
+          "title": "A Post to the externalPost endpoint has been detected,",
+          "description": "Any description",
+          "color": 11513600,
+          "fields": [
+            {
+                "name": "Date",
+                "value": ""
+            }
+          ],
+          "footer": {
+            "text": "Made by depstr"
+          }
+        }
+      ]
+
+}

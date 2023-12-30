@@ -28,7 +28,7 @@ async function SendAlert(Type: boolean) {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            content: null, embeds: [embeds[ChosenEmbed]]
+            content: (general.ping.length === 0) ? null: general.ping, embeds: [embeds[ChosenEmbed]]
         })
     });
 }
@@ -42,14 +42,13 @@ async function ExternalAlert() {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            content: null, embeds: [embeds[2]]
+            content: (general.ping.length === 0) ? null: general.ping, embeds: [embeds[2]]
         })
     });
 }
 
 async function QueryOvhAPI() {
     try {
-        console.log("Querying OVH API", new Date().toLocaleString());
         const data = await api.ip.$("51.77.68.20/32").mitigation.$("51.77.68.10").$get();
         
         // Only work while on Auto mitigation.. The API is not well documented and i am unsure how do the responses work when the mode is pernament. Feel free to open Issue!
@@ -76,7 +75,7 @@ setInterval(async () => {
 
 if (externalPost.enabled) {
     const app = Express();
-    app.listen(externalPost.port, () => console.log(`Started ExternalPost Listener @ https://<IP>:${externalPost.port}/external`));
+    app.listen(externalPost.port, () => console.log(`Started ExternalPost Listener @ http://<IP>:${externalPost.port}/external`));
 
     app.post('/external', async (req: Request, res: Response) => {
         try {

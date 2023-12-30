@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node ./src/index.ts"
+    "dev": "ts-node ./src/DDOSNotify.ts",
+    "build": "tsc ./src/DDOSNotify.ts"
   },
   "author": "",
   "license": "ISC",

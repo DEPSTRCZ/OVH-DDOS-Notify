@@ -23,7 +23,7 @@
 |                    | `ping`            | Here is the bare discord content. You can put anything you want here. For example, ping a role `<@&ID_OF_THE_ROLE>` |
 | **ExternalPost**   | `enabled`         | A boolean indicating whether external posting is enabled or not.                                                 |
 |                    | `port`            | Port number for the external posting service.                                                                    |
-|                    | `token`           | Token for authentication with the external posting service.                                                      |
+|                    | `token`           | Token for authentication with the external posting service.     `Bearer <token>`                                 |
 | **Embeds**         | -                 | An array of Discord embed objects.  See Embed section                                                            |
 
 ### Section OVH

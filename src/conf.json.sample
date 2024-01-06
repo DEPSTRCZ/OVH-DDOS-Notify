@@ -1,5 +1,7 @@
 {
     "ovh": {
+        "ip": "",
+        "ipBlock": "/32",
         "appKey": "...",
         "appSecret": "...",
         "consumerKey": "..."

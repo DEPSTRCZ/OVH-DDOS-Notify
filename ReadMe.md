@@ -14,6 +14,8 @@
 | Section            | Key               | Description                                                                                                      |
 |--------------------|-------------------|------------------------------------------------------------------------------------------------------------------|
 | **OVH**            | `appKey`          | Application key for OVH API authentication.                                                                      |
+|                    | `ip`              | Your OVH IP (Example: 51.75.64.15)
+|                    | `ipBlock`         | Your OVH Ip block with that ip. If you have only one IP (51.75.64.15/32)
 |                    | `appSecret`       | Application secret for OVH API authentication.                                                                   |
 |                    | `consumerKey`     | Consumer key for OVH API authentication.                                                                         |
 | **General**        | `WebhookURL`      | Discord Webhook URL                                                                                              |

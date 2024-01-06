@@ -45,7 +45,7 @@ async function ExternalAlert() {
 }
 async function QueryOvhAPI() {
     try {
-        const data = await api.ip.$("51.77.68.20/32").mitigation.$("51.77.68.10").$get();
+        const data = await api.ip.$(conf_json_1.ovh.ipBlock).mitigation.$(conf_json_1.ovh.ip).$get();
         switch (data.state) {
             case "creationPending":
                 if (!State)
@@ -67,6 +67,9 @@ async function QueryOvhAPI() {
         }
         ;
     }
+}
+if (!/\//.test(conf_json_1.ovh.ipBlock) || conf_json_1.ovh.ip === "" || conf_json_1.ovh.ipBlock === "" || conf_json_1.ovh.appKey === "" || conf_json_1.ovh.appSecret === "" || conf_json_1.ovh.consumerKey === "" || conf_json_1.general.WebhookURL === "") {
+    throw new Error("Please fill out the config.json file! \n Or the ip or IpBlock is not valid!");
 }
 console.log("Started OVH API Monitor");
 setInterval(async () => {

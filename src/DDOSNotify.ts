@@ -49,7 +49,7 @@ async function ExternalAlert() {
 
 async function QueryOvhAPI() {
     try {
-        const data = await api.ip.$("51.77.68.20/32").mitigation.$("51.77.68.10").$get();
+        const data = await api.ip.$(ovh.ipBlock).mitigation.$(ovh.ip).$get();
         
         // Only work while on Auto mitigation.. The API is not well documented and i am unsure how do the responses work when the mode is pernament. Feel free to open Issue!
         switch (data.state) {
@@ -67,7 +67,11 @@ async function QueryOvhAPI() {
 
 }
 
+if (!/\//.test(ovh.ipBlock) || ovh.ip === "" || ovh.ipBlock === "" || ovh.appKey === "" || ovh.appSecret === "" || ovh.consumerKey === "" || general.WebhookURL === "") {
+    throw new Error("Please fill out the config.json file! \n Or the ip or IpBlock is not valid!");
+}
 console.log("Started OVH API Monitor");
+
 setInterval(async () => {
     await QueryOvhAPI();
     
